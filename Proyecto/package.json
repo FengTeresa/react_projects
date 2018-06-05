@@ -1,0 +1,51 @@
+{
+  "name": "teresa",
+  "version": "1.0.0",
+  "main": " ",
+  "author": "teresa",
+  "license": "MIT",
+  "scripts": {
+    "serve": "live-server public/",
+    "build": "webpack --watch",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "dev-server": "webpack-dev-server --mode development --open",
+    "start": "webpack --watch"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.1",
+    "css-loader": "^0.28.11",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "firebase": "^5.0.4",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.0",
+    "nodemailer": "^4.6.5",
+    "react": "^16.3.2",
+    "react-bootstrap": "^0.32.1",
+    "react-browser-notifications": "^1.0.14",
+    "react-dom": "^16.3.2",
+    "react-modal": "^3.4.4",
+    "react-modal-bootstrap": "^1.1.1",
+    "react-notifications": "^1.4.3",
+    "reactstrap": "^6.0.1",
+    "sass-loader": "^7.0.1",
+    "sendgrid": "^5.2.3",
+    "validator": "^9.4.1",
+    "webpack": "^4.10.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-install": "2.1.0",
+    "nodemon": "^1.17.5",
+    "style-loader": "^0.21.0",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

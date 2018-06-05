@@ -1,0 +1,363 @@
+//Header
+
+// *{
+//   padding:0;
+//   margin:0;
+//   box-sizing:border-box;
+// }
+
+.text-box{
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  width: 100vw;
+  // height: 100vh;
+  // display: initial;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid black;
+  padding: 40px;
+  // background-image: url('http://static.websguru.com.ar/var/m_2/2a/2a7/74191/1080317-v-y-d-odontologia-fondo.jpg');
+  background-image: url('http://russian.myoresearch.com/images/uploads/site/background.jpg');
+
+  .text-primary, .text-sub {
+    display: block;
+    text-align: center;
+    animation-duration:  1s ;
+    animation-fill-mode: ease-in;
+  }
+  .text-primary{
+    text-transform: uppercase;
+    letter-spacing: 35px;
+    font-size: 2em;
+    animation-name: moveLeft;
+  }
+
+  .text-sub{
+    letter-spacing: 35px;
+    font-size: 1em;
+    animation-name: moveRight;
+  }
+}
+
+@keyframes moveLeft {
+  0%{
+    opacity: 0;
+    transform: translatex(-100px);
+  }
+  80%{
+    transform: translatex(10px);
+  }
+  100%{
+    opacity:1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes moveRight {
+  0%{
+    opacity: 0;
+    transform: translatex(100px);
+  }
+   80%{
+    transform: translatex(-10px);
+  }
+  100%{
+    opacity:1;
+    transform: translatex(0);
+  }
+}
+
+
+//Body
+$spacing-medium: 1.6rem;
+$spacing-small: $spacing-medium*0.5;
+$spacing-smedium: $spacing-medium*0.707;
+$spacing-large: $spacing-medium*2;
+$spacing-xlarge: $spacing-medium*4;
+$spacing-xxlarge: $spacing-medium*8;
+$box-size: $spacing-xxlarge;
+
+$color-text: #404646;
+
+html {
+  font-size: 14.5px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.45em;
+  background-color: #f0f0f0;
+  color: $color-text;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  margin: $spacing-medium $spacing-small;
+}
+
+.grid-container {
+  margin: auto;
+  display: grid;
+  grid-gap: $spacing-smedium;
+  grid-template-columns: repeat(auto-fit, minmax($box-size, $box-size));
+  grid-auto-rows: $box-size;
+  grid-auto-flow: dense;
+  justify-content: center;
+  max-width: 75em;
+}
+
+.card {
+  grid-row: auto / span 1;
+  grid-column: auto / span 1;
+  background-color: white;
+  box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
+
+  h1, h2, h3, h4, p {
+    margin-top: 0;
+    font-weight: normal;
+  }
+
+  &__image {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+
+    img {
+      height: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &__side-by-side {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+
+    &--m {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+
+      img {
+        min-height: auto;
+      }
+    }
+
+  }
+
+  &__content {
+    padding: $spacing-medium;
+
+  }
+
+  &__button {
+    margin: $spacing-medium 0;
+    text-align: center;
+    padding: $spacing-small $spacing-medium;
+    background: none;
+    border: 0px;
+    border-radius: 2px;
+
+    &:hover {
+      border-color: #d099a0;
+    }
+  }
+
+  &--featured {
+    grid-row: auto / span 3;
+    grid-column: auto / span 2;
+  }
+
+  &--2x {
+    grid-row: auto / span 2;
+    grid-column: auto / span 2;
+    background-image: url('https://thumbs.dreamstime.com/b/blue-dental-background-healthy-white-tooth-design-beautiful-light-color-clear-accurate-design-36068731.jpg');
+  }
+
+  &--vertical {
+    grid-row: auto / span 2;
+  }
+
+  &--horizontal {
+    grid-column: auto / span 2;
+  }
+
+  &--frameless {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.padding {
+  &-large {
+    padding: $spacing-large;
+    &--l {
+      padding: $spacing-medium;
+    }
+  }
+}
+
+.big-script {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Sacramento', sans-serif;
+  font-size: 4.3em;
+  line-height: 1.15em;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+@media (min-width: 627px) {
+  .grid-container {
+    grid-gap: $spacing-medium;
+  }
+
+  .card {
+    &__side-by-side--m {
+      flex-flow: row nowrap;
+
+      img {
+        min-height: 100%;
+      }
+    }
+
+    &--featured {
+      grid-row: auto / span 2;
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (min-width: 859px) {
+  .padding-large--l {
+    padding: $spacing-large;
+  }
+}
+
+
+
+//Footer
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 101.5%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+
+
+
+//Button
+.button-cita {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button-cita:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

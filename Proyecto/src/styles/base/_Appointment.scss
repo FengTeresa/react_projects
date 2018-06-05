@@ -1,0 +1,178 @@
+.container {
+  display: grid;
+  justify-content: center;
+  grid-gap: 10px;
+  // background-color: #2196F3;
+  padding: 10px;
+  text-align: center;
+}
+
+.container2 {
+  background-color: #99ccff;
+  justify-content: center;
+  border-left: 6px solid #004d99;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: left;
+  font-family: Courier New, Courier, monospace;
+}
+
+.container3 {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Courier New, Courier, monospace;
+}
+
+.title {
+  text-align: center;
+}
+
+//Input
+[type="text"], [type="date"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: initial;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: justify;
+    font-size: 15px;
+    font-family: Courier New, Courier, monospace;
+}
+
+
+
+//Checkbox
+.container4 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 15px 0;
+}
+
+.container4 input  {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+[type="checkbox"] {
+  margin: 10px 50px;
+}
+
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.container4:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container4 input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container4 .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+//DateTIme
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  95% 48% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: initial;
+  opacity: 0;
+  -webkit-appearance: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+
+
+//select
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+   margin: 8px 0;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+.gray {
+  background-color: #cccccc;
+}
+
+
+//Button
+[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+[type="submit"]:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
